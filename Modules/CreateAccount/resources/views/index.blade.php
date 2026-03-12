@@ -39,7 +39,7 @@
                             </div>
                             {{-- acc type --}}
                             <div class="form-group col-md-12">
-                                <label for="acc_type">Account Type<span class="text-danger">*</span></label><br/>
+                                <label for="acc_type">Account Type<span class="text-danger">*</span></label><br />
                                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                                     <input type="radio" class="btn-check" name="acc_type" id="btnradio1" autocomplete="off" checked="true" value="1">
                                     <label class="btn btn-outline-primary" for="btnradio1">Self Apply</label>
@@ -228,7 +228,7 @@
 
 @push('script-src')
 <script>
-    /*$('#pincode').on('input', function() {
+    $('#pincode').on('input', function() {
         var pincode = $(this).val();
 
         // Only make request if pincode is of 6 digits
@@ -271,7 +271,7 @@
             $('#city').val('');
             $('#state').val('');
         }
-    });*/
+    });
     $(".create-account-form").submit(function(event) {
         var status = document.activeElement.innerHTML;
         event.preventDefault();
