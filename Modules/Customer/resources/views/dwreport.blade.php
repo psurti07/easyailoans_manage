@@ -90,7 +90,7 @@
                                                                             <a target="_blank"
                                                                                 href="https://easyailoans.com/"
                                                                                 style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #000f26; font-size: 14px;">
-                                                                            <img src="https://easyailoans.com/front/images/logo/logo.png"
+                                                                            <img src="https://easyailoans.com/public/front/images/logo/logo.png"
                                                                                 alt="easyailoans"
                                                                                 style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;"
                                                                                 width="190"
@@ -128,7 +128,7 @@
                                                                     <tr>
                                                                         <td class="es-m-p20b" align="left"
                                                                             style="padding: 0; margin: 0; width: 600px;">
-                                                                            <h3 style="text-align:center; color: #1e7a35;font-family: Poppins, sans-serif;">
+                                                                            <h3 style="text-align:center; color: #0e5281;font-family: Poppins, sans-serif;">
                                                                                 Personal Details / Subscription Details
                                                                             </h3>
                                                                             <hr>
@@ -199,7 +199,7 @@
                                                                     <tr>
                                                                         <td class="es-m-p20b" align="left"
                                                                             style="padding: 0; margin: 0; width: 600px;">
-                                                                            <h3 style="text-align:center; color: #1e7a35;font-family: Poppins, sans-serif;">
+                                                                            <h3 style="text-align:center; color: #0e5281;font-family: Poppins, sans-serif;">
                                                                                 Agent Details
                                                                             </h3>
                                                                             <hr>
@@ -255,10 +255,10 @@
                                                                                                                                         <tr>
                                                                         <td class="es-m-p20b" align="left"
                                                                             style="padding: 0; margin: 0; width: 600px;">
-                                                                            <h3 style="text-align:center; color: #1e7a35;font-family: Poppins, sans-serif;">
+                                                                            <h3 style="text-align:center; color: #0e5281;font-family: Poppins, sans-serif;">
                                                                                 Pre-Approved Offers
                                                                             </h3>
-                                                                            <span style="display:flex; justify-content:center; color: #1e7a35;font-family: Poppins, sans-serif;">Loan Amount - ₹&nbsp;<strong>{{ formatePriceIndia($offers[0]->loanAmount) }}</strong></span>
+                                                                            <span style="display:flex; justify-content:center; color: #0e5281;font-family: Poppins, sans-serif;">Loan Amount - ₹&nbsp;<strong>{{ formatePriceIndia($offers[0]->loanAmount) }}</strong></span>
                                                                             <hr>
                                                                             <table class="offers-table">
                                                                                 <thead>
@@ -319,7 +319,7 @@
                                                                                                                                         <tr>
                                                                         <td class="es-m-p20b" align="left"
                                                                             style="padding: 0; margin: 0; width: 600px;">
-                                                                            <h3 style="text-align:center; color: #1e7a35; font-family: Poppins, sans-serif;">
+                                                                            <h3 style="text-align:center; color: #0e5281; font-family: Poppins, sans-serif;">
                                                                                 Application Remarks
                                                                             </h3>
                                                                             <hr>
