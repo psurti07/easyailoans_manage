@@ -86,6 +86,19 @@
                 </div>
             </a>
         </div>
+        <div class="col-lg-4 col-md-4 col-12">
+            <a href="javascript:;" data-payment-gateway="razorpay-log" data-entry-for="10" data-offer-name="LA Offer 5" onclick="paymentLogRedirect(this)">
+                <div class="card widget-1">
+                    <div class="card-body">
+                        <div class="widget-content">
+                            <div>
+                                <h4>&#8377;{{ formatePriceIndia($data['razorPayLA'] ?? 0) }}</h4><span class="f-light">Razorpay Payment Gateway</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
         <!-- <div class="col-lg-4 col-md-4 col-12">
             <a href="javascript:;" data-payment-gateway="airpay-log" data-entry-for="22" data-offer-name="LA Offer 5" onclick="paymentLogRedirect(this)">
                 <div class="card widget-1">
@@ -175,6 +188,19 @@
                         <div class="widget-content">
                             <div>
                                 <h4>&#8377;{{ formatePriceIndia($data['phonePeSA'] ?? 0) }}</h4><span class="f-light">PhonePe Payment Gateway</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+            <a href="javascript:;" data-payment-gateway="razorpay-log" data-entry-for="9" data-offer-name="SA Offer 4" onclick="paymentLogRedirect(this)">
+                <div class="card widget-1">
+                    <div class="card-body">
+                        <div class="widget-content">
+                            <div>
+                                <h4>&#8377;{{ formatePriceIndia($data['razorPaySA'] ?? 0) }}</h4><span class="f-light">Razorpay Payment Gateway</span>
                             </div>
                         </div>
                     </div>

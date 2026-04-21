@@ -7,6 +7,7 @@ use App\Models\CipherPayEntry;
 use App\Models\LyraEntry;
 use App\Models\PaygicEntry;
 use App\Models\PhonePeEntry;
+use App\Models\Razorpayentry;
 use App\Models\VeegahPay;
 use App\Models\SabpaisaEntry;
 use App\Models\UserRegistration;
@@ -780,6 +781,12 @@ use Modules\Auth\App\Models\Administrations;
     if(!function_exists('paymentGatewayPayments')){
         function paymentGatewayPayments(){
             // Self Apply Payment Gateway Statestics
+            $razorPaySA = Razorpayentry::where('rec_date', 'like', Carbon::now()->toDateString().'%')
+                ->whereIn('entryfor', ['6', '7', '8', '9', '11', '21', '31'])
+                ->whereNotNull('referenceid')
+                ->where('txstatus','100')
+                ->selectRaw('SUM(orderamount) as totalAmt')
+                ->first()->totalAmt;
             $zaakPaySA = ZaakpayEntry::where('rec_date', 'like', Carbon::now()->toDateString().'%')
                 ->whereIn('entryfor', ['6', '7', '8', '9', '11', '21', '31'])
                 ->whereNotNull('transactionid')
@@ -830,6 +837,13 @@ use Modules\Auth\App\Models\Administrations;
                 ->first()->totalAmt; */
 
             // Loan Agent Payment Gateway Statestics
+            $razorPayLA = Razorpayentry::where('rec_date', 'like', Carbon::now()->toDateString().'%')
+                ->whereIn('entryfor', ['3', '4', '5', '10', '12', '22','32'])
+                ->whereNotNull('referenceid')
+                ->where('txstatus','100')
+                ->selectRaw('SUM(orderamount) as totalAmt')
+                ->first()->totalAmt;
+
             $zaakPayLA = ZaakpayEntry::where('rec_date', 'like', Carbon::now()->toDateString().'%')
                 ->whereIn('entryfor', ['3', '4', '5', '10', '12', '22','32'])
                 ->whereNotNull('transactionid')
@@ -880,8 +894,8 @@ use Modules\Auth\App\Models\Administrations;
                 ->first()->totalAmt; */
             
             return [
-                'zaakPaySA'=>$zaakPaySA,'paygicSA'=>$paygicPGSA,'lyraSA'=>$lyraPGSA,'sabpaisaSA'=>$sabpaisaPGSA,'phonePeSA'=>$phonePeSA,
-                'zaakPayLA'=>$zaakPayLA,'paygicLA'=>$paygicLA,'sabpaisaLA'=>$sabpaisaPGLA,'phonePeLA'=>$phonePeLA
+                'zaakPaySA'=>$zaakPaySA,'paygicSA'=>$paygicPGSA,'lyraSA'=>$lyraPGSA,'sabpaisaSA'=>$sabpaisaPGSA,'phonePeSA'=>$phonePeSA,'razorPaySA'=>$razorPaySA,
+                'zaakPayLA'=>$zaakPayLA,'paygicLA'=>$paygicLA,'sabpaisaLA'=>$sabpaisaPGLA,'phonePeLA'=>$phonePeLA,'razorPayLA'=>$razorPayLA
             ];
         }
     }
